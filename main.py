@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def handle_hello_world():
-    name = os.getenv("INSTANCE_NAME", "Python")
+    name = os.getenv("RESPONSE_MESSAGE", "Python")
     return {"message": f"Hello {name}!"}, 200
 
 if __name__ == "__main__":
